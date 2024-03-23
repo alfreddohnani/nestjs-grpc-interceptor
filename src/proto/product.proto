@@ -1,0 +1,23 @@
+syntax = "proto3";
+package product;
+
+import "google/protobuf/struct.proto";
+
+service ProductService {
+  rpc CreateProduct(CreateProductRequest) returns (CreateProductResponse) {}
+
+  rpc GetProducts(GetProductsRequest) returns (GetProductsResponse) {}
+}
+
+message CreateProductRequest {
+  string name = 1;
+  string description = 2;
+  int32 price = 3;
+  string category = 4;
+}
+
+message CreateProductResponse { string id = 1; }
+
+message GetProductsRequest { google.protobuf.Struct filter = 1; }
+
+message GetProductsResponse { repeated string products = 1; }
