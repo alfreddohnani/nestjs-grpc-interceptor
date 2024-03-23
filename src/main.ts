@@ -16,6 +16,7 @@ async function bootstrap() {
       },
     });
 
+  // use the interceptor here
   app.useGlobalInterceptors(new ProductInterceptor());
   await app.listen();
 }
