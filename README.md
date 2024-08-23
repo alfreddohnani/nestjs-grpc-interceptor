@@ -26,7 +26,7 @@ With PostMan:
 1. Set the url of the request as `grpc://localhost:3333`.
 2. Import the `product.proto` file as the service definition.
 3. Choose `ProductService/CreateProduct`
-4. Copy paste the folling as the `message`
+4. Copy paste the following payload as the `message`
 
  ```json
  {
@@ -37,6 +37,6 @@ With PostMan:
 }
  ```
 
-- Take note of the metadata tab in PostMan. You'll see `'Set-Cookie', 'yummy_cookie=choco'` metadata which was set in the `ProductInterceptor`
+- Take note of the metadata tab of the response. You'll see `'Set-Cookie', 'yummy_cookie=choco'` metadata which was set in the `ProductInterceptor`
 
  Open issues if you have further questions.
